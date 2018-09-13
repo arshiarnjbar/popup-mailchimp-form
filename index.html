@@ -1,0 +1,23 @@
+<html>
+<head>
+  <script type="text/javascript" src="//downloads.mailchimp.com/js/signup-forms/popup/unique-methods/embed.js" data-dojo-config="usePlainJson: true, isDebug: false"></script>
+  <script>
+  function showMailingPopUp() {
+    dojoRequire(
+      ["mojo/signup-forms/Loader"],
+      function(L) {
+        L.start({"baseUrl":"mc.us19.list-manage.com","uuid":"b91b68fd99e2763fe00054f50","lid":"02b2415206","uniqueMethods":true})
+      }
+    );
+
+    document.cookie = 'MCPopupClosed=;path=/;expires=Thu, 01 Jan 1970 00:00:00 UTC;';
+    document.cookie = 'MCPopupSubscribed=;path=/;expires=Thu, 01 Jan 1970 00:00:00 UTC;';
+  }
+  document.getElementById("open-popup").onclick = function() {showMailingPopUp()};
+  </script>
+</head>
+<body>
+<button id="open-popup" onclick ="showMailingPopUp(); return false;">Subscribe to our mailing list</button>
+
+  <body>
+</html>
